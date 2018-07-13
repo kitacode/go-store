@@ -21,7 +21,6 @@ func (store *Store) Get(url string) string {
   switch store.AuthType {
   case "basic":
     req.SetBasicAuth(store.AuthUsername, store.AuthPassword)
-    fmt.Println("auth basic")
   }
 
   resp, _ := client.Do(req)
